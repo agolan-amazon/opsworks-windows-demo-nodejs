@@ -46,6 +46,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.set('view engine', 'jade');
 app.get('/', function(req, res) {
+   // randomly return 500 for re:Invent demo
+    if (Math.random() > 0.5){
+       res.status(500);
+    }
     var comments = get_comments();
     res.render("index",
                { agent: req.headers['user-agent'],
