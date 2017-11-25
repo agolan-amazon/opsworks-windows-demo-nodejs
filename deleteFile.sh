@@ -1,3 +1,3 @@
 sudo echo "Deleting File"
 cd /srv/nodejs_sample_app/
-rm -rf myFile
+rm -rf /srv/nodejs_sample_app/myFile
