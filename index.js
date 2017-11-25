@@ -47,7 +47,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.set('view engine', 'jade');
 app.get('/', function(req, res) {
    // randomly return 500 for re:Invent demo
-    if (Math.random() > 0.5 && fs.existsSync('./myFile')){
+    if (Math.random() > 0.7 && fs.existsSync('./myFile')){
        res.status(403);
     }
     var comments = get_comments();
